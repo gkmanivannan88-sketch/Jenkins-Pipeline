@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
 			steps{
-            git branch: 'Jenkins01' url:https://github.com/gkmanivannan88-sketch/Jenkins-Pipeline.git
+            git url:https://github.com/gkmanivannan88-sketch/Jenkins-Pipeline.git, branch: 'Jenkins01'
         
 				}
 		}
@@ -39,6 +39,7 @@ pipeline {
         }
     }
 }
+
 
 
 
