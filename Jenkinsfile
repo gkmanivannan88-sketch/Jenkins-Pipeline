@@ -8,13 +8,21 @@ pipeline {
 
     stages {
         stage('Checkout') {
+			steps{
             git branch: 'Jenkins01' url:https://github.com/gkmanivannan88-sketch/Jenkins-Pipeline.git
-        }
+        
+				}
+		}
         stage('Build') {
+			steps{
             sh 'mvn clean install'
+			}
         }
         stage('Run Application') {
-            sh 'mvn test'
+			steps{
+				
+           			 sh 'mvn test'
+			}
         }
         stage('Test') {
             // write your logic here
@@ -31,5 +39,6 @@ pipeline {
         }
     }
 }
+
 
 
