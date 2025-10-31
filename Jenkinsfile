@@ -18,17 +18,21 @@ pipeline {
 		}
         stage('Build') {
 			steps{
-            sh 'mvn clean install'
+            bat 'mvn clean install'
 			}
         }
-        stage('Run Application') {
-			steps{
+   //      stage('Run Application') {
+			// steps{
 				
-           			 sh 'mvn test'
-			}
-        }
+   //         			 bat 'mvn test'
+			// }
+   //      }
         stage('Test') {
             // write your logic here
+			steps{
+				
+           			 bat  'mvn test'
+			}
             post {
                 success {
                     junit 'target/surefire-reports/*.xml'
@@ -42,6 +46,7 @@ pipeline {
         }
     }
 }
+
 
 
 
