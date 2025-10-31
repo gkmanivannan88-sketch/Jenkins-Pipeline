@@ -8,7 +8,7 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            git branch: 'main' url:https://github.com/expertszen/java-standalone-application.git
+            git branch: 'main' url:https://github.com/gkmanivannan88-sketch/Jenkins-Pipeline.git
         }
         stage('Build') {
             sh 'mvn clean install'
@@ -31,3 +31,4 @@ pipeline {
         }
     }
 }
+
