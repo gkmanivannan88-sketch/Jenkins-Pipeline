@@ -6,7 +6,7 @@ pipeline {
         maven 'MAVENHOME'
     }
 	environment{
-		MAVEN_HOME=tool'MAVEN_HOME'
+		MAVEN_HOME=tool'MAVENHOME'
 		PATH="${env.MAVEN_HOME}/bin:${env.PATH}"
 	}
     stages {
@@ -42,6 +42,7 @@ pipeline {
         }
     }
 }
+
 
 
 
