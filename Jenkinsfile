@@ -3,12 +3,12 @@ pipeline {
 
     tools {
         jdk 'JDK17'
-        maven 'MAVENHOME'
+        maven 'MAVEN_HOME'
     }
-	environment{
-		MAVEN_HOME=tool'MAVENHOME'
-		PATH="${env.MAVEN_HOME}/bin:${env.PATH}"
-	}
+	// environment{
+	// 	MAVEN_HOME=tool'MAVENHOME'
+	// 	PATH="${env.MAVEN_HOME}/bin:${env.PATH}"
+	// }
     stages {
         stage('Checkout') {
 			steps{
@@ -42,6 +42,7 @@ pipeline {
         }
     }
 }
+
 
 
 
